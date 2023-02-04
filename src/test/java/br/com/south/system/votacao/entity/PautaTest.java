@@ -1,9 +1,9 @@
 package br.com.south.system.votacao.entity;
 
-import br.com.south.system.votacao.domain.Associado;
-import br.com.south.system.votacao.domain.Pauta;
-import br.com.south.system.votacao.domain.Voto;
-import br.com.south.system.votacao.domain.enumerated.TipoVoto;
+import br.com.south.system.votacao.model.Associado;
+import br.com.south.system.votacao.model.Pauta;
+import br.com.south.system.votacao.model.Voto;
+import br.com.south.system.votacao.model.enumerated.TipoVoto;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

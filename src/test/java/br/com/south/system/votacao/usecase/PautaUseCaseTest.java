@@ -1,11 +1,11 @@
 package br.com.south.system.votacao.usecase;
 
-import br.com.south.system.votacao.application.usecase.impl.PautaUseCaseImpl;
-import br.com.south.system.votacao.domain.Associado;
-import br.com.south.system.votacao.domain.Pauta;
-import br.com.south.system.votacao.domain.Voto;
-import br.com.south.system.votacao.domain.enumerated.TipoVoto;
-import br.com.south.system.votacao.domain.repository.service.PautaRepositoryService;
+import br.com.south.system.votacao.service.PautaService;
+import br.com.south.system.votacao.model.Associado;
+import br.com.south.system.votacao.model.Pauta;
+import br.com.south.system.votacao.model.Voto;
+import br.com.south.system.votacao.model.enumerated.TipoVoto;
+import br.com.south.system.votacao.model.repository.service.PautaRepositoryService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +31,7 @@ public class PautaUseCaseTest {
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     @InjectMocks
-    private PautaUseCaseImpl pautaUseCase;
+    private PautaService pautaUseCase;
 
     @Before
     public void init() {

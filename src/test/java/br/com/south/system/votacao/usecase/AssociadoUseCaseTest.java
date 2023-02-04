@@ -1,9 +1,9 @@
 package br.com.south.system.votacao.usecase;
 
-import br.com.south.system.votacao.application.usecase.CpfAPIUseCase;
-import br.com.south.system.votacao.application.usecase.impl.AssociadoUseCaseImpl;
-import br.com.south.system.votacao.domain.Associado;
-import br.com.south.system.votacao.domain.repository.service.AssociadoRepositoryService;
+import br.com.south.system.votacao.service.AssociadoService;
+import br.com.south.system.votacao.model.Associado;
+import br.com.south.system.votacao.model.repository.service.AssociadoRepositoryService;
+import br.com.south.system.votacao.service.rest.CpfAPIRestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -21,14 +21,14 @@ public class AssociadoUseCaseTest {
     private AssociadoRepositoryService repository;
 
     @Mock
-    private CpfAPIUseCase cpfAPIUseCase;
+    private CpfAPIRestService cpfAPIService;
 
     @InjectMocks
-    private AssociadoUseCaseImpl associadoUseCase;
+    private AssociadoService associadoUseCase;
 
     @Test
     public void validaNovoAssociado(){
-        doNothing().when(cpfAPIUseCase).validaCpf(anyString());
+        doNothing().when(cpfAPIService).validaCpf(anyString());
         when(repository.salva(any(Associado.class))).thenAnswer(answer -> {
             return answer.getArgument(0);
         });

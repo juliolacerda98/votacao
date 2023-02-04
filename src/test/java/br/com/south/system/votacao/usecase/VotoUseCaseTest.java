@@ -1,13 +1,13 @@
 package br.com.south.system.votacao.usecase;
 
-import br.com.south.system.votacao.application.usecase.impl.PautaUseCaseImpl;
-import br.com.south.system.votacao.application.usecase.impl.VotoUseCaseImpl;
-import br.com.south.system.votacao.domain.Associado;
-import br.com.south.system.votacao.domain.Pauta;
-import br.com.south.system.votacao.domain.Voto;
-import br.com.south.system.votacao.domain.enumerated.TipoVoto;
-import br.com.south.system.votacao.domain.repository.service.AssociadoRepositoryService;
-import br.com.south.system.votacao.domain.repository.service.PautaRepositoryService;
+import br.com.south.system.votacao.service.PautaService;
+import br.com.south.system.votacao.service.VotoService;
+import br.com.south.system.votacao.model.Associado;
+import br.com.south.system.votacao.model.Pauta;
+import br.com.south.system.votacao.model.Voto;
+import br.com.south.system.votacao.model.enumerated.TipoVoto;
+import br.com.south.system.votacao.model.repository.service.AssociadoRepositoryService;
+import br.com.south.system.votacao.model.repository.service.PautaRepositoryService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -28,10 +28,10 @@ public class VotoUseCaseTest {
     private PautaRepositoryService pautaRepository;
 
     @Mock
-    private PautaUseCaseImpl pautaUseCase;
+    private PautaService pautaUseCase;
 
     @InjectMocks
-    private VotoUseCaseImpl votoUseCase;
+    private VotoService votoUseCase;
 
     @Test
     public void validaNovoVoto(){
