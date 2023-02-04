@@ -2,7 +2,6 @@ package br.com.south.system.votacao.model.repository;
 
 import br.com.south.system.votacao.model.Pauta;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.Optional;
 
