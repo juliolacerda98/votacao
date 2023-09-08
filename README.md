@@ -7,7 +7,7 @@ maior granularidade e também clean code no desenvolvimento, foi tomada a decis�
 as regras de negocio as classes responsáveis por cada uma delas.
 
 #### Tecnologias utilizadas:
-- Projeto _Java 17_ utilizando o framework _SpringBoot_ e também o _Maven_ para gerenciamento do 
+- Projeto _Java 11_ utilizando o framework _SpringBoot_ e também o _Maven_ para gerenciamento do 
 mesmo. 
 - Utilização do _OpenFeing_ para a chamada externa de validação de aptidão de voto de associado **(Tarefa Bônus 1)**;
 - Utilização do _Kafka_ como fila de mensageria para envio de resultado da votação também disponibilizando 
